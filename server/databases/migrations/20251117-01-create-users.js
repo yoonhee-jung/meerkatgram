@@ -66,23 +66,26 @@ const attributes = {
   refreshToken: {
     field: 'refresh_token',
     type: DataTypes.STRING(255),
-    allowNull: true,
+    allowNull: true,  //allowNull이 true면 defaultValue가 자동으로 null
     comment: '리프레시 토큰',
   },
   createdAt: {
     field: 'created_at',
     type: DataTypes.DATE(),
     allowNull: true,
+    comment: '작성일',
   },
   updatedAt: {
     field: 'updated_at',
     type: DataTypes.DATE(),
     allowNull: true,
+    comment: '수정일',
   },
   deletedAt: {
     field: 'deleted_at',
     type: DataTypes.DATE(),
     allowNull: true,
+    comment: '삭제일',
   },
   };
 
