@@ -1,6 +1,6 @@
 /**
- * @file databases/migrations/20251118-06-alter-notifications-is_read.js
- * @description notiifcations-is_read 알터문
+ * @file databases/migrations/20251118-07-fk-posts-user_id.js
+ * @description Add fk on posts.user_id
  * 251118 v1.0.0 yoonhee npm 초기화
  */
 
@@ -40,13 +40,25 @@ const downAttributes = {
 
 export default {
   async up (queryInterface, Sequelize) {
-    await queryInterface.changeColumn(tableName, key, upAttributes);
+    await queryInterface.addConstraint(
+      'posts', 
+      {
+        fields: ['user_id'],  //fk 부여할 컬럼
+        type: 'foreign key',  //사용할 constraint 종류
+        name: 'fk_posts_user_id',  //fk명 지정        
+        references: {
+          table: 'users', //참조할 테이블
+          field: 'id',  //참조 컬럼 지정
+        },
+        onDelete: 'CASCADE',  //참조 레코드가 삭제 시, posts의 레코드도 같이 삭제
+      }
+    );
   },
 
-  async down (queryInterface, sequelize) {
+  async down (queryInterface, Sequelize) {
     /**
      * down 마이그레이션 롤백 > 호출, undo처리하고 싶을 때(스키마 제거, 수정) 작성하는 영역
      */
-    await queryInterface.changeColumn(tableName, key, downAttributes);
+    await queryInterface.removeConstraint('posts', 'fk_posts_user_id')
   }
 };

@@ -74,7 +74,6 @@ export default {
      * down 마이그레이션 롤백 > 호출, undo처리하고 싶을 때(스키마 제거, 수정) 작성하는 영역
      */
     await queryInterface.dropTable(tableName);
-
   }
 };
 

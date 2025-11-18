@@ -21,7 +21,7 @@ const attributes = {
     field: 'id',
     type: DataTypes.BIGINT.UNSIGNED,
     primaryKey: true,
-    allowNull:false,
+    allowNull: false,
     autoIncrement: true,
     comment: '유저 PK',
   },
