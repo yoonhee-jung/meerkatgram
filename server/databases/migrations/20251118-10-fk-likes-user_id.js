@@ -1,6 +1,6 @@
 /**
- * @file databases/migrations/20251118-08-fk-comments-user_id.js
- * @description Add fk on comments.user_id
+ * @file databases/migrations/20251118-10-fk-likes-user_id.js
+ * @description Add fk on likes-user_id
  * 251118 v1.0.0 yoonhee npm 초기화
  */
 
@@ -13,8 +13,6 @@ import { DataTypes } from "sequelize";
 
 //deleted_at 삭제되었다 인식 soft date 위한 컬럼.
 
-//키명, 컬럼명
-const key = 'is_read';
 
 //컬럼 정의
 const upAttributes = {
@@ -36,10 +34,10 @@ const downAttributes = {
 //옵션 설정 설정 안 하면 default 그냥 됨
 
 //테이블명
-const tableName = 'comments';
+const tableName = 'likes';
 
 //constraint명
-const constraintName = 'fk_comments_user_id';
+const constraintName = 'fk_likes_user_id';
 
 const options = {
         fields: ['user_id'],  //fk 부여할 컬럼
@@ -50,7 +48,7 @@ const options = {
           field: 'id',  //참조 컬럼 지정
         },
         onDelete: 'CASCADE',  //참조 레코드가 삭제 시, posts의 레코드도 같이 삭제
-};
+} ;
 
 
 export default {

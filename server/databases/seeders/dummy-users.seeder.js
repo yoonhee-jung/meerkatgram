@@ -40,7 +40,6 @@ const records = [
 
   //데이터 생성: queryInterface.bulkInsert(tableName, records, options);
   await queryInterface.bulkInsert(tableName, records, {});
-
   },
 
   async down (queryInterface, Sequelize) {

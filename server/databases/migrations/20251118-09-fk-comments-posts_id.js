@@ -42,7 +42,7 @@ const tableName = 'comments';
 const constraintName = 'fk_comments_post_id';
 
 const options = {
-        fields: ['user_id'],  //fk 부여할 컬럼
+        fields: ['post_id'],  //fk 부여할 컬럼
         type: 'foreign key',  //사용할 constraint 종류
         name: constraintName,  //fk명 지정        
         references: {
