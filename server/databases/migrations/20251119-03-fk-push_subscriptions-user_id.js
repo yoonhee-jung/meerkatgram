@@ -1,14 +1,14 @@
 /**
- * @file databases/migrations/20251118-08-fk-comments-user_id.js
- * @description Add fk on comments.user_id
- * 251118 v1.0.0 park init
+ * @file databases/migrations/20251119-03-fk-push_subscriptions-user_id.js
+ * @description Add fk on push_subscriptions.user_id
+ * 251119 v1.0.0 park init
  */
 
 // 테이블명
-const tableName = 'comments';
+const tableName = 'push_subscriptions';
 
 // Constraint명
-const constraintName = 'fk_comments_user_id';
+const constraintName = 'fk_push_subscriptions_user_id';
 
 // Constraint 정의
 const options = {

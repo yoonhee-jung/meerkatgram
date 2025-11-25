@@ -1,18 +1,26 @@
 /**
  * @file app.js
  * @description Entry Point
- * 251117 v1.0.0 yoonhee
+ * 251117 v1.0.0 park
  */
 
 import express from 'express';
 import './configs/env.config.js';
+import authRouter from './routes/auth.router.js';
+import errorHandler from './app/errors/errorHandler.js';
 
 const app = express();
+app.use(express.json()); // JSON 요청 파싱 처리
 
-// 이 약어가 중복될 가능성이 있느냐 없느냐 생각해서 약어 쓰기..
-app.get('/', (req, res, next) => {
-  res.status(200).send('테스트');
-});
+// --------------------
+// 라우터 정의
+// --------------------
+app.use('/api/auth', authRouter);
 
-// 해당 port로 express 실행
-app.listen(3000);
+// 에러 핸들러 등록
+app.use(errorHandler);
+
+// --------------------
+// 해당 Port로 express 실행
+// --------------------
+app.listen(parseInt(process.env.APP_PORT));

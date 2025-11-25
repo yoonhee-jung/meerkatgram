@@ -1,12 +1,11 @@
 /**
- * @file databases/config/sequelize-cli.config/js
+ * @file databases/config/sequelize-cli.config.js
  * @description sequelize-cli 설정 파일
- * 251117 v1.0.0 yoonhee 생성
+ * 251117 v1.0.0 park 최초 작성
  */
 
 import '../../configs/env.config.js';
 
-// 개발, 테스트, 접속 환경
 export default {
   development: {
     username: process.env.DB_MYSQL_USER,

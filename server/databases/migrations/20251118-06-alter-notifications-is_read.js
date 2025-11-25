@@ -1,52 +1,42 @@
 /**
  * @file databases/migrations/20251118-06-alter-notifications-is_read.js
- * @description notiifcations-is_read 알터문
- * 251118 v1.0.0 yoonhee npm 초기화
+ * @description notifications-is_read change
+ * 251118 v1.0.0 park init
  */
 
-import { DataTypes } from "sequelize";
+import { DataTypes, Sequelize } from 'sequelize';
 
-/**
- * up 마이그레이션 실행 > 호출, 스키마를 생성, 수정하는 영역 정의
-*/
-
-//테이블명
+// 테이블명
 const tableName = 'notifications';
 
-//deleted_at 삭제되었다 인식 soft date 위한 컬럼.
-
-//키명, 컬럼명
+// 키명
 const key = 'is_read';
 
-//컬럼 정의
+// 컬럼 정의
 const upAttributes = {
   type: DataTypes.BOOLEAN,
   allowNull: false,
   defaultValue: false,
-  comment: '읽음 여부',
-  };
+  comment: '읽음여부',
+};
 
 const downAttributes = {
   type: DataTypes.TINYINT(1),
   allowNull: false,
   defaultValue: 0,
-  comment: '읽음 여부',
+  comment: '읽음여부'
 };
 
-//항상 롤백할 수 있는 코드까지 같이 적어줘야 함
-
-//옵션 설정 설정 안 하면 default 그냥 됨
-
-
+/** @type {import('sequelize-cli').Migration} */
 export default {
-  async up (queryInterface, Sequelize) {
+  // 마이그레이션 실행 시 호출되는 메소드 (스키마 생성, 수정)
+  async up(queryInterface, Sequelize) {
+    // 컬럼 수정 : queryInterface.changeColumn(tableName, key, attributes, options)
     await queryInterface.changeColumn(tableName, key, upAttributes);
   },
 
-  async down (queryInterface, sequelize) {
-    /**
-     * down 마이그레이션 롤백 > 호출, undo처리하고 싶을 때(스키마 제거, 수정) 작성하는 영역
-     */
+  // 마이그레이션을 롤백 시 호출되는 메소드(스키마 제거, 수정)
+  async down(queryInterface, Sequelize) {
     await queryInterface.changeColumn(tableName, key, downAttributes);
   }
 };

@@ -1,6 +1,6 @@
 /**
- * @file databases/migrations/20251118-08-fk-comments-user_id.js
- * @description Add fk on comments.user_id
+ * @file databases/migrations/20251118-08-fk-comments-post_id.js
+ * @description Add fk on comments.post_id
  * 251118 v1.0.0 park init
  */
 
@@ -8,15 +8,15 @@
 const tableName = 'comments';
 
 // Constraint명
-const constraintName = 'fk_comments_user_id';
+const constraintName = 'fk_comments_post_id';
 
 // Constraint 정의
 const options = {
-  fields: ['user_id'],      // fk 부여할 컬럼
+  fields: ['post_id'],      // fk 부여할 컬럼
   type: 'foreign key',      // constraint 종류
   name: constraintName,     // constraint명 지정
   references: {             // 참조 설정
-    table: 'users',           // 참조할 테이블
+    table: 'posts',           // 참조할 테이블
     field: 'id',              // 참조 컬럼 지정
   },
   onDelete: 'CASCADE',      // 참조 레코드가 삭제 시, posts의 레코드도 같이 삭제

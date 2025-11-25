@@ -1,21 +1,15 @@
 /**
- * @file databases/migrations/20251118-02-create-posts.js
- * @description posts migration file
- * 251118 v1.0.0 yoonhee npm 초기화
+ * @file databases/migrations/20251118-01-create-notifications.js
+ * @description notifications migration file
+ * 251118 v1.0.0 park init
  */
 
-import { DataTypes } from "sequelize";
+import { DataTypes } from 'sequelize';
 
-/**
- * up 마이그레이션 실행 > 호출, 스키마를 생성, 수정하는 영역 정의
-*/
-
-//테이블명
+// 테이블명
 const tableName = 'notifications';
 
-//deleted_at 삭제되었다 인식 soft date 위한 컬럼.
-
-//컬럼 정의
+// 컬럼 정의
 const attributes = {
   id: {
     field: 'id',
@@ -31,61 +25,58 @@ const attributes = {
     allowNull: false,
     comment: '유저 PK',
   },
-  content: {
+  title: {
     field: 'title',
     type: DataTypes.STRING(200),
     allowNull: false,
-    comment: '제목',
+    comment: '제목'
   },
   content: {
     field: 'content',
     type: DataTypes.STRING(1000),
     allowNull: false,
-    comment: '내용',
+    comment: '내용'
   },
   isRead: {
     field: 'is_read',
     type: DataTypes.TINYINT(1),
-    allowNull: true,
+    allowNull: false,
     defaultValue: 0,
-    comment: '읽음여부',
+    comment: '읽음여부'
   },
   createdAt: {
     field: 'created_at',
-    type: DataTypes.DATE(),
+    type: DataTypes.DATE,
     allowNull: true,
-    comment: '작성일',
   },
   updatedAt: {
     field: 'updated_at',
-    type: DataTypes.DATE(),
+    type: DataTypes.DATE,
     allowNull: true,
-    comment: '수정일',
   },
   deletedAt: {
     field: 'deleted_at',
-    type: DataTypes.DATE(),
+    type: DataTypes.DATE,
     allowNull: true,
-    comment: '삭제일',
-  },
-  };
-
-//옵션 설정 설정 안 하면 default 그냥 됨
-const options = {
-  charset: 'utf8mb4', //테이블 문자셋 설정(이모지 지원)
-  collate: 'utf8mb4_0900_ai_ci', //정렬 방식 설정(악센트 구분 안 하고 대소문자 구분 안 하겠다, 기본 설정)
-  engine: 'InnoDB', //사용 엔진 설정
+  }
 };
 
+// 옵션 설정
+const options = {
+  charset: 'utf8mb4',       // 테이블 문자셋 설정(이모지 지원)
+  collate: 'utf8mb4_0900_ai_ci',   // 정렬 방식 설정 (기본 설정)
+  engine: 'InnoDB'          // 사용 엔진 설정
+};
+
+/** @type {import('sequelize-cli').Migration} */
 export default {
-  async up (queryInterface, Sequelize) {
+  // 마이그레이션 실행 시 호출되는 메소드 (스키마 생성, 수정)
+  async up(queryInterface, Sequelize) {
     await queryInterface.createTable(tableName, attributes, options);
   },
 
-  async down (queryInterface, Sequelize) {
-    /**
-     * down 마이그레이션 롤백 > 호출, undo처리하고 싶을 때(스키마 제거, 수정) 작성하는 영역
-     */
+  // 마이그레이션을 롤백 시 호출되는 메소드(스키마 제거, 수정)
+  async down(queryInterface, Sequelize) {
     await queryInterface.dropTable(tableName);
   }
 };

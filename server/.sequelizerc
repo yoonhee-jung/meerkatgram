@@ -1,11 +1,8 @@
 const path = require('path');
-// import 하는 것, import는 아직 지원 안 함
 
 module.exports = {
     config: path.resolve('databases', 'configs', 'sequelize-cli.config.js'),
-    // resolve 내가 설정하는 절대경로 반환
     'models-path': path.resolve('app', 'models'),
-    // 중간에 - 들어가면 문자열 인식 못 함 하지만 이름 무조건 models-path로 지어야 함 > ''로 감싸야 함
     'seeders-path': path.resolve('databases', 'seeders'),
     'migrations-path': path.resolve('databases', 'migrations'),
 }
