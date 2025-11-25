@@ -21,6 +21,16 @@ async function findByEmail(t = null, email) {
   );
 }
 
+/**유저 모델 인스턴스로 save 처리
+ * @param {import("sequelize").Transaction}
+ * @param {import("../models/index.js").User} user
+ * @returns
+ */
+async function save(t = null, user) {
+  return await user.save({transaction: t});
+
+}
+
 export default {
-  findByEmail,
+  findByEmail, save
 }

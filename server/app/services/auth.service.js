@@ -9,13 +9,33 @@ import userRepository from "../repositories/user.repository.js";
 import myError from '../errors/customs/my.error.js';
 import { NOT_REGISTERED_ERROR } from '../../configs/responseCode.config.js';
 import jwtUtil from '../utils/jwt/jwt.util.js';
+import db from '../models/index.js';
 
+  /**
+   * @param {import("sequelize").Transaction}
+   * @param {string} email
+   * @returns
+   */
+  
 
+/**
+ * 잘 모르겟다 싶을 때는
+ * async function login(body) {
+ * return await db.sequelize.transaction(async t => {
+ * 이 안에 비지니스 로직 다 넣기
+ * })
+ * } 
+ */
+
+//트랜잭션 처리 t = transaction
 async function login(body) {
+
+  return await db.sequelize.transaction(async t => {
   const { email, password } = body;
 
+
   // email로 유저 정보 획득
-  const user = await userRepository.findByEmail(null, email);
+  const user = await userRepository.findByEmail(t, email);
 
   // 유저 존재 여부 체크
   if(!user) {
@@ -33,11 +53,18 @@ async function login(body) {
   //refreshToken 저장
   const refreshToken = jwtUtil.generateRefreshToken(user);
 
+
+  user.refreshToken = refreshToken;
+  await userRepository.save(t, user);
+
   return {
     accessToken,
     refreshToken,
     user
   }
+
+  });
+
 }
 
 export default {
