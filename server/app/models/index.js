@@ -23,7 +23,7 @@ const sequelize = new Sequelize(
   ,{
     host: process.env.DB_MYSQL_HOST                     // 사용 DB Host
     ,port: parseInt(process.env.DB_MYSQL_PORT)          // 사용 DB Port
-    ,dialect: process.env.DB_MYSQL_DIALECT              // 사용 DB 드라이버
+    ,dialect: process.env.DB_MYSQL_DIALECT             // 사용 DB 드라이버
     ,timezone: process.env.DB_MYSQL_TIMEZONE            // 타임존
     ,logging: process.env.DB_MYSQL_LOG_FLG === 'true' && console.log  // DB Loggin on/off
     ,dialectOptions: {

@@ -45,3 +45,26 @@ function generateAccessToken(user) {
   //액세스 토큰 생성
   return generateToken(payload, parseInt(process.env.JWT_ACCESS_TOKEN_EXPIRY));
 }
+
+/**
+ * 리프레시 토큰 생성
+ * @param {import("../../models/index.js").User} user 
+ * @returns {string} JWT
+ * 
+ */
+//public
+function generateRefreshToken(user) {
+  //페이로드 설정
+  const payload = {
+    sub: user.id, //payload.sub set (value:user pk)
+  }
+
+  //리프레시 토큰 생성
+  return generateToken(payload, parseInt(process.env.JWT_REFRESH_TOKEN_EXPIRY));
+}
+
+// 내보내기
+
+export default {
+  generateAccessToken, generateRefreshToken,
+};
