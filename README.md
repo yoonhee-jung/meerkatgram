@@ -73,3 +73,5 @@ npm init
 npm i express express-validator morgan winston dotenv sequelize sequelize-cli mysql2 cookie-parser jsonwebtoken cors multer swagger-ui-express yaml dayjs bcrypt web-push
 npm install -D nodemon
 ````
+
+### 디렉토리 depth가 max가 5 안 넘어가게..
