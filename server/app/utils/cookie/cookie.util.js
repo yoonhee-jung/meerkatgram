@@ -24,7 +24,7 @@ function setCookie(res, cookieName, cookieValue, ttl, httpOnlyFlg = true, secure
     cookieName,
     cookieValue,
     {
-      expires:dayjs().add(ttl, 'milli').toDate(),
+      expires:dayjs().add(ttl, 'second').toDate(),
       httpOnly: httpOnlyFlg,
       secure: secureFlg,
       sameSite: 'none', //기본으로 none 세팅하기.. 
