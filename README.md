@@ -67,11 +67,14 @@ npm i dayjs react-router-dom @reduxjs/toolkit react-redux axios jwt-decode
 npm install -D vite-plugin-pwa
 ````
 
+### jwt-decode:토큰 값 확인
+
 ### server
 ````
 npm init
-npm i express express-validator morgan winston dotenv sequelize sequelize-cli mysql2 cookie-parser jsonwebtoken cors multer swagger-ui-express yaml dayjs bcrypt web-push
+npm i express express-validator morgan winston dotenv sequelize sequelize-cli mysql2 cookie-parser jsonwebtoken cors multer swagger-ui-express swagger-parser yaml dayjs bcrypt web-push
 npm install -D nodemon
 ````
 
+### jsonwebtoken :node 환경/ 브라우저 환경
 ### 디렉토리 depth가 max가 5 안 넘어가게..

@@ -1,0 +1,70 @@
+import multer from 'multer';
+import myError from '../../../errors/customs/my.error.js';
+import { BAD_FILE_ERROR } from '../../../../configs/responseCode.config.js';
+import fs from 'fs';
+import dayjs from 'dayjs';
+
+/**
+ * @file app/middlewares/multer/uploaders/post.uploader.js
+ * @description 게시글 이미지업로더
+ * 251127 v1.0.0 yoonhee init
+ */
+
+//export default > 익명함수
+
+/**
+ * 개시글이미지 업로더 처리 미들웨어
+ * @param {import("express").Request} req 
+ * @param {import("express").Response} res 
+ * @param {import("express").NextFunction} next 
+ */
+export default function(req, res, next) {
+  //multer객체 정의
+  
+  //파일을저장할 위치를 상세 제어하는 프로퍼티 > storage
+  //파일필터링처리를 제어하는 프로퍼티 > fileFilter
+  //파일 사이즈 제한, 파일 개수 제한 > limits
+  const upload = multer({
+    storage: multer.diskStorage({
+      //파일저장경로 설정 callback 약어 cb
+    destination(req, file, callback) {
+      //저장디렉토리 설정
+      if(!fs.existsSync(process.env.FILE_POST_IMAGE_PATH)) {
+        //해당 디렉토리 없으면 생성 처리
+        fs.mkdirSync(
+          process.env.FILE_POST_IMAGE_PATH,
+          {
+            recursive: true, //중간 디렉토리까지 모두 생성
+            mode: 0o755 // 권한 설정 rwxr-xr-x
+          }
+        );
+      }
+
+      callback(null, process.env.FILE_POST_IMAGE_PATH);
+
+    },
+
+    //파일 명 설정
+    filename(req, file, callback) {
+      //저장할 파일 명 생성
+      const uniqueFileName = `${dayjs().format('YYYYMMDD')}_${crypto.randomUUID()}`;
+      const fileNameParts = file.originalname.split('.');
+      const ext = fileNameParts[fileNameParts.length - 1].toLowerCase();
+      
+      callback(null, `${uniqueFileName}.${ext}`);
+    }
+
+    }),
+    fileFilter: ,
+    limits:
+  }).single('image');
+  //multer객체 인스턴스
+
+  //예외 처리
+  upload(req, res, err => {
+    if(err instanceof multer.MulterError || err) {
+      next(myError(err.message, BAD_FILE_ERROR));
+    }
+    next();
+  });
+}

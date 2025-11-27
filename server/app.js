@@ -8,9 +8,23 @@ import express from 'express';
 import './configs/env.config.js';
 import authRouter from './routes/auth.router.js';
 import errorHandler from './app/errors/errorHandler.js';
+import SwaggerParser from 'swagger-parser';
+import path from 'path';
+import swaggerUi from 'swagger-ui-express';
+
+
 
 const app = express();
 app.use(express.json()); // JSON 요청 파싱 처리
+
+//swagger등록
+//swagger yaml file bundling
+const swaggerDoc = await SwaggerParser.bundle(path.join(path.resolve(),'swagger/swagger.yaml'));
+//path.resolve() (E/~/server) 문자열 'swagger/..' 문자열
+
+//swagger ui 등록
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
+
 
 // --------------------
 // 라우터 정의
