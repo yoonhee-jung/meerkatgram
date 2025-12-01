@@ -7,6 +7,8 @@ import PostShow from "../components/posts/PostShow.jsx"
 import Registration from "../components/users/Registration.jsx"
 import UserInfo from "../components/common/UserInfo.jsx";
 
+
+
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -36,11 +38,11 @@ const router = createBrowserRouter([
        element: <PostShow />,
       },
       {
-       path: '/registrate',
+       path: '/registration',
        element: <Registration />,
       },
       {
-       path: '/userinfo',
+       path: '/users/:id',
        element: <UserInfo />,
       },
     ]
