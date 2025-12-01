@@ -41,9 +41,7 @@ async function show(id) {
  * @returns {Promise<import("../models/Post.js").Post>}
  */
 async function create(data) {
-  return db.sequelize.transaction(async t => {
-    return await postRepository.create(null, data);
-  })
+  return await postRepository.create(null, data);
 }
 
 /**

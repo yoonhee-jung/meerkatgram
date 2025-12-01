@@ -50,7 +50,6 @@ export const image = body('image')
   .bail()
   .custom(val => {
     //우리 앱 게시글 이미지에 접근하는 도메인 + path가 맞는지 확인
-    //실제 이미지 파일이 있는지 검증 처리
     const splitPath = val.split('/');
     const fullPath = path.join(pathUtil.getPostsImagePath(), splitPath[splitPath.length - 1]);
     console.log(fullPath);

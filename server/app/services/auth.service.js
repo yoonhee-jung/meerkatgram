@@ -55,6 +55,40 @@ async function login(body) {
   });
 }
 
+/**
+ * 토큰 재발급 처리
+ * @param {string} token
+ */
+async function reissue(token) {
+  // 토큰 검증 및 유저 id 획득
+  const claims = jwtUtil.getClaimsWithVerifyToken(token);
+  const userId = claims.sub;
+
+  return await db.sequelize.transaction(async t => {
+    //유저 정보 획득
+    const user = await userRepository.findByPk(t, userId);
+    //토큰 일치 검증
+    if(token !== user.refreshToken) {
+      throw myError('리프레시 토큰 불일치', REISSUE_ERROR);
+    }
+
+    //JWT 생성
+    const accessToken = jwtUtil.generateAccessToken(user);
+    const refreshToken = jwtUtil.generateRefreshToken(user);
+
+    //리프레시 토큰 DB에 저장
+    user.refreshToken = refreshToken;
+    await userRepository.save(t, user);
+
+    return {
+    accessToken,
+    refreshToken,
+    user
+    }
+  });
+}
+
 export default {
   login,
+  reissue,
 }
