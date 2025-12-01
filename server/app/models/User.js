@@ -48,7 +48,7 @@ const attributes = {
     field: 'role',
     type: DataTypes.STRING(10),
     allowNull: false,
-    comment: '유저 권한(, SUPER...)',
+    comment: '유저 권한(NOMAL, SUPER...)',
   },
   profile: {
     field: 'profile',

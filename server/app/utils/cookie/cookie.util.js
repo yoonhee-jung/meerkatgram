@@ -1,43 +1,42 @@
-import dayjs from 'dayjs';
-
 /**
  * @file app/utils/cookie/cookie.util.js
- * @description Cookie Utility
- * 251115 v1.0.0 yoonhee init
+ * @description Cookie 유틸리티
+ * 251125 v1.0.0 park init
  */
 
+import dayjs from "dayjs";
 
-
-//private
+// ----------------
+// private
+// ----------------
 /**
  * 
- * @param {import ("express").Response} res 
+ * @param {import("express").Response} res 
  * @param {string} cookieName 
  * @param {string} cookieValue 
  * @param {number} ttl 
  * @param {boolean} httpOnlyFlg 
  * @param {boolean} secureFlg 
  */
-
 function setCookie(res, cookieName, cookieValue, ttl, httpOnlyFlg = true, secureFlg = false) {
   res.cookie(
     cookieName,
     cookieValue,
     {
-      expires:dayjs().add(ttl, 'second').toDate(),
+      expires: dayjs().add(ttl, 'second').toDate(),
       httpOnly: httpOnlyFlg,
       secure: secureFlg,
-      sameSite: 'none', //기본으로 none 세팅하기.. 
+      sameSite: 'none',
     }
   );
-
 }
 
-//쿠키에서 리프레시 토큰 쿠키를 설정
-//public
+// ----------------
+// public
+// ----------------
 /**
- * 
- * @param {import("express").Response}} res 
+ * 쿠키에 리프래시 토큰 설정
+ * @param {import("express").Response} res 
  * @param {string} refreshToken 
  */
 function setCookieRefreshToken(res, refreshToken) {

@@ -24,13 +24,12 @@ async function login(req, res, next) {
     const body = req.body; // 파라미터 획득
     
     // 로그인 서비스 호출
-    const {accessToken, refreshToken, user} = await authService.login(body);
+    const { accessToken, refreshToken, user } = await authService.login(body);
 
-    //Cookie에 RefreshToken 설정
+    // Cookie에 RefreshToken 설정
+    cookieUtil.setCookieRefreshToken(res, refreshToken);
 
-    cookieUtil.setCookieRefreshToken(res,refreshToken);
-
-    return res.status(SUCCESS.status).send(createBaseResponse(SUCCESS,{accessToken,user}));
+    return res.status(SUCCESS.status).send(createBaseResponse(SUCCESS, {accessToken, user}));
   } catch(error) {
     next(error);
   }

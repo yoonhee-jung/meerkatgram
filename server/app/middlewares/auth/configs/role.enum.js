@@ -1,7 +1,7 @@
 /**
- * @file app/middlewares/auth/configs/role/enum.js
+ * @file app/middlewares/auth/configs/role.enum.js
  * @description 유저 권한 상수 설정 파일
- * 251126 v1.0.0 init
+ * 251126 v1.0.0 park init
  */
 
 const ROLE = {
@@ -9,7 +9,6 @@ const ROLE = {
   SUPER: 'SUPER',
   NORMAL: 'NORMAL'
 };
-
 Object.freeze(ROLE);
 
 export default ROLE;
