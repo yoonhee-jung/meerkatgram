@@ -32,3 +32,264 @@ Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\st
 Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
 [2025-12-04 12:59:16] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
 Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 14:43:09] error - ReferenceError: next is not defined
+ReferenceError: next is not defined
+    at socialCallback (file:///E:/yoonhee/meerkatgram/server/app/controllers/auth.controller.js:117:5)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at next (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:117:3)
+    at handle (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at E:\yoonhee\meerkatgram\server\node_modules\router\index.js:295:15
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:600:14)
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:610:14)
+    at processParams (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:664:3)
+[2025-12-04 14:43:09] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 16:46:51] error - ReferenceError: next is not defined
+ReferenceError: next is not defined
+    at socialCallback (file:///E:/yoonhee/meerkatgram/server/app/controllers/auth.controller.js:124:5)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at next (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:117:3)
+    at handle (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at E:\yoonhee\meerkatgram\server\node_modules\router\index.js:295:15
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:600:14)
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:610:14)
+    at processParams (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:664:3)
+[2025-12-04 16:46:51] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 16:50:20] error - ReferenceError: next is not defined
+ReferenceError: next is not defined
+    at socialCallback (file:///E:/yoonhee/meerkatgram/server/app/controllers/auth.controller.js:124:5)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at next (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:117:3)
+    at handle (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at E:\yoonhee\meerkatgram\server\node_modules\router\index.js:295:15
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:600:14)
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:610:14)
+    at processParams (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:664:3)
+[2025-12-04 16:50:21] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 16:50:25] error - ReferenceError: next is not defined
+ReferenceError: next is not defined
+    at socialCallback (file:///E:/yoonhee/meerkatgram/server/app/controllers/auth.controller.js:124:5)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at next (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:117:3)
+    at handle (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at E:\yoonhee\meerkatgram\server\node_modules\router\index.js:295:15
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:600:14)
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:610:14)
+    at processParams (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:664:3)
+[2025-12-04 16:50:25] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 17:05:16] error - ReferenceError: next is not defined
+ReferenceError: next is not defined
+    at socialCallback (file:///E:/yoonhee/meerkatgram/server/app/controllers/auth.controller.js:124:5)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at next (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:117:3)
+    at handle (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at E:\yoonhee\meerkatgram\server\node_modules\router\index.js:295:15
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:600:14)
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:610:14)
+    at processParams (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:664:3)
+[2025-12-04 17:05:16] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 17:05:35] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 17:06:22] error - ReferenceError: next is not defined
+ReferenceError: next is not defined
+    at socialCallback (file:///E:/yoonhee/meerkatgram/server/app/controllers/auth.controller.js:124:5)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at next (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:117:3)
+    at handle (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at E:\yoonhee\meerkatgram\server\node_modules\router\index.js:295:15
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:600:14)
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:610:14)
+    at processParams (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:664:3)
+[2025-12-04 17:06:22] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 17:06:22] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 17:06:23] error - ReferenceError: next is not defined
+ReferenceError: next is not defined
+    at socialCallback (file:///E:/yoonhee/meerkatgram/server/app/controllers/auth.controller.js:124:5)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at next (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:117:3)
+    at handle (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at E:\yoonhee\meerkatgram\server\node_modules\router\index.js:295:15
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:600:14)
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:610:14)
+    at processParams (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:664:3)
+[2025-12-04 17:06:23] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 17:06:23] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 17:06:25] error - ReferenceError: next is not defined
+ReferenceError: next is not defined
+    at socialCallback (file:///E:/yoonhee/meerkatgram/server/app/controllers/auth.controller.js:124:5)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at next (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:117:3)
+    at handle (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at E:\yoonhee\meerkatgram\server\node_modules\router\index.js:295:15
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:600:14)
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:610:14)
+    at processParams (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:664:3)
+[2025-12-04 17:06:25] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 17:06:25] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 17:19:30] error - ReferenceError: next is not defined
+ReferenceError: next is not defined
+    at socialCallback (file:///E:/yoonhee/meerkatgram/server/app/controllers/auth.controller.js:124:5)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at next (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:117:3)
+    at handle (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at E:\yoonhee\meerkatgram\server\node_modules\router\index.js:295:15
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:600:14)
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:610:14)
+    at processParams (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:664:3)
+[2025-12-04 17:19:30] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 17:19:33] error - ReferenceError: next is not defined
+ReferenceError: next is not defined
+    at socialCallback (file:///E:/yoonhee/meerkatgram/server/app/controllers/auth.controller.js:124:5)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at next (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:117:3)
+    at handle (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at E:\yoonhee\meerkatgram\server\node_modules\router\index.js:295:15
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:600:14)
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:610:14)
+    at processParams (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:664:3)
+[2025-12-04 17:19:33] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 17:21:21] error - ReferenceError: next is not defined
+ReferenceError: next is not defined
+    at socialCallback (file:///E:/yoonhee/meerkatgram/server/app/controllers/auth.controller.js:124:5)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at next (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:117:3)
+    at handle (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at E:\yoonhee\meerkatgram\server\node_modules\router\index.js:295:15
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:600:14)
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:610:14)
+    at processParams (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:664:3)
+[2025-12-04 17:21:21] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 17:28:21] error - ReferenceError: next is not defined
+ReferenceError: next is not defined
+    at socialCallback (file:///E:/yoonhee/meerkatgram/server/app/controllers/auth.controller.js:124:5)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at next (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:117:3)
+    at handle (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at E:\yoonhee\meerkatgram\server\node_modules\router\index.js:295:15
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:600:14)
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:610:14)
+    at processParams (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:664:3)
+[2025-12-04 17:28:21] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 17:49:14] error - ReferenceError: next is not defined
+ReferenceError: next is not defined
+    at socialCallback (file:///E:/yoonhee/meerkatgram/server/app/controllers/auth.controller.js:124:5)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at next (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:117:3)
+    at handle (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at E:\yoonhee\meerkatgram\server\node_modules\router\index.js:295:15
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:600:14)
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:610:14)
+    at processParams (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:664:3)
+[2025-12-04 17:49:14] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 17:49:56] error - ReferenceError: key is not defined
+ReferenceError: key is not defined
+    at socialCallback (file:///E:/yoonhee/meerkatgram/server/app/controllers/auth.controller.js:109:5)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at next (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\yoonhee\meerkatgram\server\node_modules\router\lib\route.js:117:3)
+    at handle (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\yoonhee\meerkatgram\server\node_modules\router\lib\layer.js:152:17)
+    at E:\yoonhee\meerkatgram\server\node_modules\router\index.js:295:15
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:600:14)
+    at param (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:610:14)
+    at processParams (E:\yoonhee\meerkatgram\server\node_modules\router\index.js:664:3)
+[2025-12-04 17:49:56] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 17:50:52] error - AxiosError: Request failed with status code 401
+AxiosError: Request failed with status code 401
+    at settle (file:///E:/yoonhee/meerkatgram/server/node_modules/axios/lib/core/settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (file:///E:/yoonhee/meerkatgram/server/node_modules/axios/lib/adapters/http.js:793:11)
+    at IncomingMessage.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (file:///E:/yoonhee/meerkatgram/server/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.socialKakao (file:///E:/yoonhee/meerkatgram/server/app/services/auth.service.js:104:22)
+    at async socialCallback (file:///E:/yoonhee/meerkatgram/server/app/controllers/auth.controller.js:112:22)
+[2025-12-04 17:50:52] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 17:51:13] error - AxiosError: Request failed with status code 401
+AxiosError: Request failed with status code 401
+    at settle (file:///E:/yoonhee/meerkatgram/server/node_modules/axios/lib/core/settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (file:///E:/yoonhee/meerkatgram/server/node_modules/axios/lib/adapters/http.js:793:11)
+    at IncomingMessage.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (file:///E:/yoonhee/meerkatgram/server/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.socialKakao (file:///E:/yoonhee/meerkatgram/server/app/services/auth.service.js:104:22)
+    at async socialCallback (file:///E:/yoonhee/meerkatgram/server/app/controllers/auth.controller.js:112:22)
+[2025-12-04 17:51:15] error - AxiosError: Request failed with status code 401
+AxiosError: Request failed with status code 401
+    at settle (file:///E:/yoonhee/meerkatgram/server/node_modules/axios/lib/core/settle.js:19:12)
+    at IncomingMessage.handleStreamEnd (file:///E:/yoonhee/meerkatgram/server/node_modules/axios/lib/adapters/http.js:793:11)
+    at IncomingMessage.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at Axios.request (file:///E:/yoonhee/meerkatgram/server/node_modules/axios/lib/core/Axios.js:45:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.socialKakao (file:///E:/yoonhee/meerkatgram/server/app/services/auth.service.js:104:22)
+    at async socialCallback (file:///E:/yoonhee/meerkatgram/server/app/controllers/auth.controller.js:112:22)
+[2025-12-04 17:51:15] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 17:54:05] error - ReferenceError: PROVIDER is not defined
+ReferenceError: PROVIDER is not defined
+    at file:///E:/yoonhee/meerkatgram/server/app/services/auth.service.js:126:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async E:\yoonhee\meerkatgram\server\node_modules\sequelize\lib\sequelize.js:507:18
+[2025-12-04 17:54:05] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+[2025-12-04 17:54:33] error - SequelizeDatabaseError: Data too long for column 'profile' at row 1
+Error
+    at Query.run (E:\yoonhee\meerkatgram\server\node_modules\sequelize\lib\dialects\mysql\query.js:52:25)
+    at E:\yoonhee\meerkatgram\server\node_modules\sequelize\lib\sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.insert (E:\yoonhee\meerkatgram\server\node_modules\sequelize\lib\dialects\abstract\query-interface.js:308:21)
+    at async model.save (E:\yoonhee\meerkatgram\server\node_modules\sequelize\lib\model.js:2490:35)
+    at async User.create (E:\yoonhee\meerkatgram\server\node_modules\sequelize\lib\model.js:1362:12)
+    at async Object.create (file:///E:/yoonhee/meerkatgram/server/app/repositories/user.repository.js:49:10)
+    at async file:///E:/yoonhee/meerkatgram/server/app/services/auth.service.js:131:14
+    at async E:\yoonhee\meerkatgram\server\node_modules\sequelize\lib\sequelize.js:507:18
+[2025-12-04 17:54:33] error - Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
+Error: ENOENT: no such file or directory, stat 'E:\yoonhee\meerkatgram\server\storage\dist\index.html'
