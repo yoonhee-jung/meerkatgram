@@ -12,6 +12,6 @@ import validationHandler from '../app/middlewares/validations/validationHandler.
 const authRouter = express.Router();
 
 authRouter.post('/login', loginValidator, validationHandler, authController.login);
-//refresh토큰 별도 인증.. access토큰 인증 절차는 신경 안 씀
 authRouter.post('/reissue', authController.reissue);
+
 export default authRouter;

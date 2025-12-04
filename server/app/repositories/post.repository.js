@@ -5,7 +5,7 @@
  */
 
 import db from '../models/index.js';
-const {sequelize, Post, Comment} = db;
+const {sequelize, Post, Comment, User } = db;
 
 /**
  * 게시글 페이지네이션
@@ -14,18 +14,16 @@ const {sequelize, Post, Comment} = db;
  * @returns {Promise<Array<import("../models/Post.js").Post>>}
  */
 async function pagination(t = null, data) {
-  return await Post.findAndCountAll(
-    {
-      order: [
-        ['createdAt', 'DESC'],
-        ['updatedAt', 'DESC'],
-        ['id', 'ASC']
-      ],
-      limit: data.limit,
-      offset: data.offset,
-      transaction: t,
-    }
-  );
+  return await Post.findAndCountAll({
+    order: [
+      ['createdAt', 'DESC'],
+      ['updatedAt', 'DESC'],
+      ['id', 'ASC']
+    ],
+    limit: data.limit,
+    offset: data.offset,
+    transaction: t,
+  });
 
   // return await Post.findAll(
   //   {
@@ -61,6 +59,27 @@ async function findByPkWithComments(t = null, id) {
             replyId: 0
           },
           required: false, // Left Join 설정
+          include: [
+            {
+              attributes: ['nick', 'profile'],
+              model: User,
+              as: 'author',
+              required: true, // Inner Join 설정
+            },
+            {
+              model: Comment,
+              as: 'replies',
+              required: false, // Left Join 설정
+              include: [
+                {
+                  attributes: ['nick', 'profile'],
+                  model: User,
+                  as: 'author',
+                  required: true, // Inner Join 설정
+                }
+              ],
+            }
+          ],
         }
       ],
       transaction: t

@@ -37,32 +37,32 @@ async function login(req, res, next) {
 }
 
 /**
- * 로그인 컨트롤러 처리
+ * 토큰 재발급 컨트롤러 처리
  * @param {import("express").Request} req - Request 객체
  * @param {import("express").Response} res - Response 객체
  * @param {import("express").NextFunction} next - NextFunction 객체 
  * @returns
  */
 async function reissue(req, res, next) {
-  console.log(req.cookies);
   try {
     const token = cookieUtil.getCookieRefreshToken(req);
-    //토큰 존재 여부 확인
+
+    // 토큰 존재 여부 확인
     if(!token) {
-      throw myError('리프레시 토큰 없음', REISSUE_ERROR);
+      throw myError('리프래시 토큰 없음', REISSUE_ERROR);
     }
-    //토큰 재발급 처리
+
+    // 토큰 재발급 처리
     const { accessToken, refreshToken, user } = await authService.reissue(token);
 
-    //쿠키에 리프레시 토큰 설정
+    // 쿠키에 리프래시 토큰 설정
     cookieUtil.setCookieRefreshToken(res, refreshToken);
 
-    return res.status(SUCCESS.status).send(createBaseResponse(SUCCESS, { accessToken, user}))
-  } catch (error) {
+    return res.status(SUCCESS.status).send(createBaseResponse(SUCCESS, { accessToken, user }))
+  } catch(error) {
     next(error);
-    
   }
-} //컨트롤러는 항상 try.. catch가 있다
+}
 
 // --------------
 // export

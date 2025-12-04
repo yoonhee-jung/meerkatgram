@@ -1,10 +1,10 @@
-import {createSlice} from '@reduxjs/toolkit';
-import { postIndexThunk } from '../thunk/postIndexThunk';
+import { createSlice } from '@reduxjs/toolkit';
+import { postIndexThunk } from '../thunks/postIndexThunk.js';
 
 const initialState = {
-  //여러 개: list, data..
   list: null,
   page: 0,
+  isLasted: false,
 }
 
 const slice = createSlice({
@@ -16,31 +16,29 @@ const slice = createSlice({
       state.page = 0;
     },
   },
-
-  extraReducers: builder => {
+  extraReducers: (builder) => {
     builder
       .addCase(postIndexThunk.fulfilled, (state, action) => {
-        //const {posts, page} = action.payload.data; 길면 구조분해 쓰면 됨
+        const { posts, page, count, limit } = action.payload.data;
 
-        //리스트가 비어있는지 체크
+        // 리스트가 비어있는지 체크
         if(state.list) {
-          state.list = [...state.list, ...action.payload.data.posts];
+          state.list = [...state.list, ...posts];
         } else {
-          state.list = action.payload.data.posts;
+          state.list = posts;
         }
-        //action은 성공/실패 등 많은 정보 담겨있음..
 
-        //현재 페이지 저장
-        state.page = action.payload.data.page;
+        // 현재 페이지 저장
+        state.page = page;
 
+        // 마지막 페이지 여부 플래그 저장
+        state.isLasted = (page * limit) >= count;
       })
-
-  }, //일반적으로 extraReducer 쓸 때는 화살표 함수 씀
-
+  },
 });
 
 export const {
-  clearPostIndex, 
+  clearPostIndex,
 } = slice.actions;
 
 export default slice.reducer;

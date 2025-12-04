@@ -36,17 +36,17 @@ async function save(t = null, user) {
 }
 
 /**
- * 유저 id로 유저 정보 조회 
+ * 유저id로 유저정보 조회
  * @param {import("sequelize").Transaction} t 
- * @param {number} id
- * @returns {Promise<ImportAttributes("../models/User.js").User>} 
+ * @param {number} id 
+ * @returns {Promise<import("../models/User.js").User>}
  */
 async function findByPk(t = null, id) {
-  return await User.findByPk(id, {transaction: t});
+  return await User.findByPk(id, { transaction: t });
 }
 
 export default {
   findByEmail,
   save,
-  findByPk
+  findByPk,
 }
