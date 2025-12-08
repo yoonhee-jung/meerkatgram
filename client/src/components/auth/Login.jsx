@@ -24,10 +24,13 @@ export default function Login() {
     }
   }
 
-function handleSocial(provider) {
-  window.location.replace(`/api/auth/social/${provider}`);
-}
+  function handleSocial(provider) {
+    window.location.replace(`/api/auth/social/${provider}`);
+  }
 
+  function redirectRegistration() {
+    return navigate('/registration');
+  }
   return (
     <>
       <form className="login-container" onSubmit={handleLogin}>
@@ -36,7 +39,7 @@ function handleSocial(provider) {
         <button type="submit" className="btn-big bg-gray">Log in</button>
         <div className="text-on-line">or</div>
         <button type="button" className="btn-big bg-img-kakao" onClick={() => {handleSocial('kakao')}}></button>
-        <button type="button" className="btn-big bg-light">Sign up</button>
+        <button type="button" className="btn-big bg-light" onClick={redirectRegistration}>Sign up</button>
       </form>
     </>
   )
