@@ -19,8 +19,6 @@ export default {
       }
     );
 
-    const totalCount = 1000;
-    
     // 유저별 게시글 데이터 생성
     for (const user of users) {
       for(let i = 0; i < 10; i++) {

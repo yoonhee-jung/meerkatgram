@@ -1,18 +1,17 @@
 /**
  * @file app/repositories/pushSubscription.repository.js
- * @descriptions pushSubscriptions repo
- * 251208 yoonhee init
+ * @description pushSubscription Repository
+ * 251208 v1.0.0 park init
  */
 
 import db from '../models/index.js';
-
-const {PushSubscription} = db;
+const { PushSubscription } = db;
 
 async function upsert(t = null, data) {
   return await PushSubscription.upsert(data, {transaction: t});
 }
 
-async function findByUSerId(t = null, userId) {
+async function findByUserId(t = null, userId) {
   return await PushSubscription.findAll(
     {
       where: {
@@ -24,14 +23,17 @@ async function findByUSerId(t = null, userId) {
     }
   );
 }
-async function hardDestory(t = null, id) {
-  return await PushSubscription.destory({
+
+async function hardDestroy(t = null, id) {
+  return await PushSubscription.destroy({
     where: {id: id},
-    force: true, // 모델에 soft-delete 옵션이 있으므로, hard-delete로 동작하게 바꿔 줌
+    force: true,
     transaction: t,
   });
 }
 
 export default {
-  upsert,findByUSerId,hardDestory
+  upsert,
+  findByUserId,
+  hardDestroy,
 }
